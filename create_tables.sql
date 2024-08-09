@@ -13,7 +13,10 @@ create table employee (
 	full_name   varchar(255) not null,
 	phone#      char(10) not null,
 	wh#         int not null,
-	supervisor# int
+	supervisor# int,
+	foreign key ( wh# )
+		references warehouse ( wh# )
+			on delete cascade
 );
 
 create table supervisor (
