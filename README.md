@@ -1,6 +1,7 @@
 # Database design for a delivery company
 ## Introduction
-The goal is to create a system that can manage orders, track deliveries, handle customer information, and ensure efficient operation of the delivery service. The database should include tables for customers, parcel, delivery personnel, ..., with relationships that accurately reflect the interactions between these entities.
+The goal is to create a system that can manage orders, track deliveries, handle customer information, and ensure efficient operation of the delivery service. The database should include tables for customers, parcel, delivery personnel, ..., with relationships that accurately reflect the interactions between these entities.  
+**Database: Oracel database 23ai**
 ## Delivery process
 <img src="./diagrams/graph.png" alt="drawing" width="400"/>
 
