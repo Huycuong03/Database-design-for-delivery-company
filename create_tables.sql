@@ -64,16 +64,13 @@ create table parcel (
 		references transport,
 	title      varchar(255),
 	note       varchar(255),
-	cod        int not null check ( cod > 0 ),
-	cod_status int not null check ( cod_status between 0 and 5 ),
+	cod        int default 0 check ( cod >= 0 ),
+	cod_status int default 0 check ( cod_status between 0 and 5 ),
 	status     int default 0 check ( status between 0 and 8 )
 );
 
 create table sending (
 	sending#   int primary key,
-    payment    int generated always as ( 
-        get_payment( sender#, recipient#, parcel# ) 
-    ) not null,
 	send_date  date default sysdate not null,
 	sender#    int not null
 		references customer ( customer# )
