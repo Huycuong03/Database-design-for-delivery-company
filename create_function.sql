@@ -24,5 +24,6 @@ begin
 	    on parcel.transport# = transport.transport#
 	 where parcel# = parcel#;
 
+-- The formula below is made up and not the practical way to calculate delivery cost
 	return abs(sender_zip# - recipient_zip#) * parcel_cost_rate;
 end get_payment;
