@@ -1,4 +1,4 @@
-create or replace noneditionable function get_payment (
+create or replace function get_payment (
 	sender#    in int,
 	recipient# in int,
 	parcel#    in int
